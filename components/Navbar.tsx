@@ -1,14 +1,23 @@
 import Link from 'next/link';
-import React from 'react';
+import React, {ReactNode} from 'react';
 import Logo from './Logo';
 import {useRouter} from 'next/router';
-import {GithubIcon, LinkedInIcon} from './icons';
+import {GithubIcon, LinkedInIcon} from './Icons';
+import {motion} from 'framer-motion';
 
 interface ICustomLink {
+    children?: ReactNode;
     href: string;
-    title: string;
+    title?: string;
     className?: string;
 }
+const MotionLink: React.FC<ICustomLink> = ({href, children}) => {
+    return (
+        <motion.a className="w-6 mx-3" href={href} target={'_blank'} whileHover={{y: -2}} whileTap={{scale: 0.9}}>
+            {children}
+        </motion.a>
+    );
+};
 
 const CustomLink: React.FC<ICustomLink> = ({href, title, className = ''}) => {
     const router = useRouter();
@@ -35,15 +44,15 @@ const Navbar = () => {
                 <CustomLink href="/articles" title="Articles" className="ml-4" />
             </nav>
 
-            <nav>
-                <Link href="/" target={'_blank'}>
+            <nav className="flex items-center justify-center flex-wrap">
+                <MotionLink href="/">
                     <GithubIcon />
-                </Link>
-                <Link href="/" target={'_blank'}>
+                </MotionLink>
+                <MotionLink href="/">
                     <LinkedInIcon />
-                </Link>
+                </MotionLink>
             </nav>
-            <div className="absolute  left-[50%] top-2 translate-x-[-50%] ">
+            <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
                 <Logo />
             </div>
         </header>

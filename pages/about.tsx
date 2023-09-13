@@ -46,7 +46,7 @@ const YearExperience: React.FC<IYearExperience> = ({amount, description}) => {
             <span className="inline-block text-7xl font-bold">
                 <AnimatedNumbers value={amount} />+
             </span>
-            <h2 className="text-xl font-medium capitalize text-black/75">{description}</h2>
+            <h2 className="text-xl font-medium capitalize text-black/75 dark:text-white/75">{description}</h2>
         </div>
     );
 };
@@ -58,12 +58,16 @@ const about = () => {
                 <title>CodeBucks | About Page</title>
                 <meta name="description" content="any description" />
             </Head>
-            <main className="flex w-full flex-col items-center justify-center">
+            <main
+                className="flex w-full flex-col items-center justify-center
+            dark:text-white">
                 <Layout className="pt-16">
                     <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
                     <div className="grid w-full grid-cols-8 gap-16">
                         <div className="col-span-3 flex flex-col items-start justify-start">
-                            <h2 className="mb-4 text-lg font-bold uppercase text-black/75"> Biography</h2>
+                            <h2 className="mb-4 text-lg font-bold uppercase text-black/75 dark:text-white/75 ">
+                                Biography
+                            </h2>
                             <p className="font-medium">
                                 Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating
                                 beautiful, functional, and user-centered digital experiences. With 4 years of experience
@@ -80,8 +84,13 @@ const about = () => {
                                 look forward to the opportunity to bring my skills and passion to your next project.
                             </p>
                         </div>
-                        <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8">
-                            <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black" />
+                        <div
+                            className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8
+                        dark:bg-black dark:border-white">
+                            <div
+                                className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black 
+                            dark:bg-white"
+                            />
                             <img src={profilePic} alt="" className="w-full h-auto rounded-2xl" />
                         </div>
                         <div className="col-span-2 flex flex-col items-end justify-between">

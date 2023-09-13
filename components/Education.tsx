@@ -16,7 +16,7 @@ const Details: React.FC<Details> = ({type, time, place, info}) => {
             <LiIcon reference={ref} />
             <motion.p initial={{y: 50}} whileInView={{y: 0}} transition={{duration: 0.5, type: 'spring'}}>
                 <span className="inline-block capitalize font-bold text-2xl">{type}</span>
-                <span className="capitalize font-medium text-black/75">
+                <span className="capitalize font-medium text-black/75 dark:text-white/75">
                     {time} | {place}
                 </span>
                 <p className="font-medium w-full">{info}</p>
@@ -38,7 +38,7 @@ const Education = () => {
             <div className="w-[75%] mx-auto relative">
                 <motion.div
                     ref={ref}
-                    className="absolute left-9 top-0 w-1 h-full bg-black origin-top"
+                    className="absolute left-9 top-0 w-1 h-full bg-black dark:bg-white origin-top"
                     style={{scaleY: scrollYProgress}}
                 />
                 <ul className="w-full flex flex-col items-start justify-between ml-4">

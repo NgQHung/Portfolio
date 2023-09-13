@@ -35,9 +35,12 @@ const singleWord = {
 
 const AnimatedText: React.FC<IAnimatedText> = ({text, className = ''}) => {
     return (
-        <div className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden">
+        <div
+            className="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden
+        ">
             <motion.h1
-                className={`inline-block w-full text-black font-bold capitalize text-8xl ${className}`}
+                className={`inline-block w-full text-black font-bold capitalize text-8xl ${className}
+                dark:text-white`}
                 variants={quote}
                 initial="initial"
                 animate="animate">

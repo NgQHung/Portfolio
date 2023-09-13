@@ -19,11 +19,11 @@ const Details: React.FC<Details> = ({position, company, companyLink, time, addre
             <motion.p initial={{y: 50}} whileInView={{y: 0}} transition={{duration: 0.5, type: 'spring'}}>
                 <span className=" inline-block capitalize font-bold text-2xl">
                     {position}&nbsp;
-                    <a href={companyLink} target="_blank" className="text-primary capitalize">
+                    <a href={companyLink} target="_blank" className="text-primary dark:text-primaryDark capitalize">
                         @{company}
                     </a>
                 </span>
-                <span className="capitalize font-medium text-black/75">
+                <span className="capitalize font-medium text-black/75 dark:text-white/75">
                     {time} | {address}
                 </span>
                 <p className="font-medium w-full">{work}</p>
@@ -45,7 +45,8 @@ const Experience = () => {
             <div className="w-[75%] mx-auto relative">
                 <motion.div
                     ref={ref}
-                    className="absolute left-9 top-0 w-1 h-full bg-black origin-top"
+                    className="absolute left-9 top-0 w-1 h-full bg-black origin-top
+                    dark:bg-white"
                     style={{scaleY: scrollYProgress}}
                 />
                 <ul className="w-full flex flex-col items-start justify-between ml-4">

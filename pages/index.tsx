@@ -1,8 +1,10 @@
 import AnimatedText from '@/components/AnimatedText';
+import {LinkArrow} from '@/components/Icons';
 import Layout from '@/components/Layout';
+import Link from 'next/link';
 
 const profilePic =
-    'https://images.unsplash.com/photo-1694439368032-230a1bad9617?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1902&q=80';
+    'https://images.unsplash.com/photo-1576228290547-b7e32fe598d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9sZCUyMHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80';
 export default function Home() {
     return (
         <main className={`flex items-center text-black w-full min-h-screen`}>
@@ -13,11 +15,28 @@ export default function Home() {
                     </div>
                     <div className="w-1/2">
                         <AnimatedText text="Turning Vision Into Reality With Code And Design" className="!text-6xl" />
-                        <p>
+                        <p className="my-4 text-base font-medium">
                             As a skilled full-stack developer, I am dedicated to turning ideas into innovative web
                             applications. Explore my latest projects and articles, showcasing my expertise in React.js
                             and web development.
                         </p>
+                        <div className="flex items-center self-start mt-2">
+                            <Link
+                                href=""
+                                target={'_blank'}
+                                className="flex items-center bg-black text-white p-2.3 px-6 
+                                rounded-lg text-lg font-semibold hover:bg-white hover:text-black
+                                border border-solid border-transparent hover:border-black"
+                                download={true}>
+                                Resume <LinkArrow className={'w-6 ml-1'} />
+                            </Link>
+                            <Link
+                                href="mailto:hunghunghung273@gmail.com"
+                                target={'_blank'}
+                                className="ml-4 text-lg font-medium capitalize text-black underline">
+                                Contact
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </Layout>

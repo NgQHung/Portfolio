@@ -1,4 +1,5 @@
 import AnimatedText from '@/components/AnimatedText';
+import HireMe from '@/components/HireMe';
 import {LinkArrow} from '@/components/Icons';
 import Layout from '@/components/Layout';
 import Link from 'next/link';
@@ -39,6 +40,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+                <HireMe />
+                {/* <div><img src='' alt='' className='w-full h-auto'/></div> */}
             </Layout>
         </main>
     );

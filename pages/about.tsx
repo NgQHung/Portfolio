@@ -1,5 +1,6 @@
 import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
+import Skills from '@/components/Skills';
 import {motion, useInView, useMotionValue, useSpring} from 'framer-motion';
 import Head from 'next/head';
 import React, {useEffect, useRef} from 'react';
@@ -87,6 +88,7 @@ const about = () => {
                             <Experience amount={4} description="years of experience" />
                         </div>
                     </div>
+                    <Skills />
                 </Layout>
             </main>
         </>

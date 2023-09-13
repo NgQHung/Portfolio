@@ -1,11 +1,13 @@
 import AnimatedText from '@/components/AnimatedText';
+import Education from '@/components/Education';
+import Experience from '@/components/Experience';
 import Layout from '@/components/Layout';
 import Skills from '@/components/Skills';
 import {motion, useInView, useMotionValue, useSpring} from 'framer-motion';
 import Head from 'next/head';
 import React, {useEffect, useRef} from 'react';
 
-interface IExperience {
+interface IYearExperience {
     amount: Number;
     description: String;
 }
@@ -38,7 +40,7 @@ const AnimatedNumbers: React.FC<IAnimatedNumbers> = ({value}) => {
     return <span ref={ref}></span>;
 };
 
-const Experience: React.FC<IExperience> = ({amount, description}) => {
+const YearExperience: React.FC<IYearExperience> = ({amount, description}) => {
     return (
         <div className="flex flex-col items-end justify-center">
             <span className="inline-block text-7xl font-bold">
@@ -83,12 +85,14 @@ const about = () => {
                             <img src={profilePic} alt="" className="w-full h-auto rounded-2xl" />
                         </div>
                         <div className="col-span-2 flex flex-col items-end justify-between">
-                            <Experience amount={50} description="satisfied clients" />
-                            <Experience amount={40} description="projects completed" />
-                            <Experience amount={4} description="years of experience" />
+                            <YearExperience amount={50} description="satisfied clients" />
+                            <YearExperience amount={40} description="projects completed" />
+                            <YearExperience amount={4} description="years of experience" />
                         </div>
                     </div>
                     <Skills />
+                    <Experience />
+                    <Education />
                 </Layout>
             </main>
         </>

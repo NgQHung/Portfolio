@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -7,9 +8,15 @@ const HireMe = () => {
             className="fixed left-4 bottom-4
     flex items-center justify-center overflow-hidden">
             <div className="w-48 h-auto flex items-center justify-center relative">
-                <img src="circle-text.png" alt="" className="fill-black animate-spin-slow dark:fill-white" />
-                {/* Frontend developer . Backend developer
-                </img> */}
+                <Image
+                    src="/circle-text.png"
+                    alt=""
+                    className="fill-black animate-spin-slow dark:fill-white"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{width: '100%', height: 'auto'}}
+                />
                 <Link
                     href="mailto:hunghunghung273@gmail.com"
                     className="flex items-center justify-center 

@@ -2,6 +2,7 @@ import AnimatedText from '@/components/AnimatedText';
 import {GithubIcon} from '@/components/Icons';
 import Layout from '@/components/Layout';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -30,7 +31,15 @@ const FeaturedProject: React.FC<IProject> = ({type, title, summary, img, link, g
             />
 
             <Link href={link} target="_blank" className="w-1/2 cursor-pointer overflow-hidden rounded-lg">
-                <img src={img} alt={title} className="w-full h-auto" />
+                <Image
+                    src={img}
+                    alt={title}
+                    className="w-full h-auto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{width: '100%', height: 'auto'}}
+                />
             </Link>
             <div className="w-1/2 flex flex-col items-start justify-between pl-6">
                 <span className="text-primary font-medium text-xl dark:text-primaryDark">{type}</span>
@@ -67,7 +76,15 @@ const Project: React.FC<IProject> = ({title, type, summary, img, link, github}) 
             dark:bg-white"
             />
             <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
-                <img src={img} alt={title} className="w-full h-auto" />
+                <Image
+                    src={img}
+                    alt={title}
+                    className="w-full h-auto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{width: '100%', height: 'auto'}}
+                />
             </Link>
             <div className="w-full flex flex-col items-start justify-between mt-4">
                 <span className="text-primary font-medium text-xl dark:text-primaryDark">{type}</span>

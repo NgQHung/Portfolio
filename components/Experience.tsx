@@ -16,7 +16,7 @@ const Details: React.FC<Details> = ({position, company, companyLink, time, addre
     return (
         <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between ">
             <LiIcon reference={ref} />
-            <motion.p initial={{y: 50}} whileInView={{y: 0}} transition={{duration: 0.5, type: 'spring'}}>
+            <motion.div initial={{y: 50}} whileInView={{y: 0}} transition={{duration: 0.5, type: 'spring'}}>
                 <span className=" inline-block capitalize font-bold text-2xl">
                     {position}&nbsp;
                     <a href={companyLink} target="_blank" className="text-primary dark:text-primaryDark capitalize">
@@ -27,7 +27,7 @@ const Details: React.FC<Details> = ({position, company, companyLink, time, addre
                     {time} | {address}
                 </span>
                 <p className="font-medium w-full">{work}</p>
-            </motion.p>
+            </motion.div>
         </li>
     );
 };

@@ -3,8 +3,9 @@ import Education from '@/components/Education';
 import Experience from '@/components/Experience';
 import Layout from '@/components/Layout';
 import Skills from '@/components/Skills';
-import {motion, useInView, useMotionValue, useSpring} from 'framer-motion';
+import {useInView, useMotionValue, useSpring} from 'framer-motion';
 import Head from 'next/head';
+import Image from 'next/image';
 import React, {useEffect, useRef} from 'react';
 
 interface IYearExperience {
@@ -69,17 +70,17 @@ const about = () => {
                                 Biography
                             </h2>
                             <p className="font-medium">
-                                Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating
+                                Hi, I`m CodeBucks, a web developer and UI/UX designer with a passion for creating
                                 beautiful, functional, and user-centered digital experiences. With 4 years of experience
-                                in the field. I am always looking for new and innovative ways to bring my clients'
+                                in the field. I am always looking for new and innovative ways to bring my clients`
                                 visions to life.
                             </p>
                             <p className="my-4 font-medium">
-                                I believe that design is about more than just making things look pretty – it's about
+                                I believe that design is about more than just making things look pretty – it`s about
                                 solving problems and creating intuitive, enjoyable experiences for users.{' '}
                             </p>
                             <p className="font-medium">
-                                Whether I'm working on a website, mobile app, or other digital product, I bring my
+                                Whether I`m working on a website, mobile app, or other digital product, I bring my
                                 commitment to design excellence and user-centered thinking to every project I work on. I
                                 look forward to the opportunity to bring my skills and passion to your next project.
                             </p>
@@ -91,7 +92,15 @@ const about = () => {
                                 className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-black 
                             dark:bg-white"
                             />
-                            <img src={profilePic} alt="" className="w-full h-auto rounded-2xl" />
+                            <Image
+                                width={0}
+                                height={0}
+                                sizes="100vw"
+                                style={{width: '100%', height: 'auto'}}
+                                src={profilePic}
+                                alt=""
+                                className="w-full h-auto rounded-2xl"
+                            />
                         </div>
                         <div className="col-span-2 flex flex-col items-end justify-between">
                             <YearExperience amount={50} description="satisfied clients" />

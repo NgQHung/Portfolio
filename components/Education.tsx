@@ -14,13 +14,13 @@ const Details: React.FC<Details> = ({type, time, place, info}) => {
     return (
         <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between ">
             <LiIcon reference={ref} />
-            <motion.p initial={{y: 50}} whileInView={{y: 0}} transition={{duration: 0.5, type: 'spring'}}>
+            <motion.div initial={{y: 50}} whileInView={{y: 0}} transition={{duration: 0.5, type: 'spring'}}>
                 <span className="inline-block capitalize font-bold text-2xl">{type}</span>
                 <span className="capitalize font-medium text-black/75 dark:text-white/75">
                     {time} | {place}
                 </span>
                 <p className="font-medium w-full">{info}</p>
-            </motion.p>
+            </motion.div>
         </li>
     );
 };

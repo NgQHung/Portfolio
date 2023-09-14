@@ -1,6 +1,7 @@
 import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -17,15 +18,25 @@ const profilePic =
 
 const FeaturedArticle: React.FC<IFeaturedArticle> = ({img, title, time, summary, link}) => {
     return (
-        <li className="col-span-1 w-full p-4 bg-white border border-solid border-black rounded-2xl">
+        <li
+            className="col-span-1 w-full p-4 bg-white border border-solid border-black rounded-2xl
+         dark:border-white dark:bg-black">
             <Link href={link} target="_blank" className="w-1/2 cursor-pointer overflow-hidden rounded-lg">
-                <img src={img} alt={title} className="w-full h-auto" />
+                <Image
+                    src={img}
+                    alt={title}
+                    className="w-full h-auto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{width: '100%', height: 'auto'}}
+                />
             </Link>
             <Link href={link} target="_blank">
                 <h2 className="capitalize text-2xl font-bold my-2 hover:underline">{title}</h2>
             </Link>
             <p className="text-sm mb-2">{summary}</p>
-            <span className="text-primary font-semibold">{time}</span>
+            <span className="text-primary font-semibold dark:text-primaryDark">{time}</span>
         </li>
     );
 };
@@ -37,7 +48,10 @@ const articles = () => {
                 <title>CodeBucks | About Page</title>
                 <meta name="description" content="any description" />
             </Head>
-            <main className="w-ful mb-16 flex flex-col items-center justify-center overflow-hidden">
+            <main
+                className="w-ful mb-16 flex flex-col items-center justify-center overflow-hidden
+            dark:text-white
+            ">
                 <Layout className="pt-16">
                     <AnimatedText text="Words Can Change The World!" className="mb-16" />
                     <ul className="grid grid-cols-2 gap-16">

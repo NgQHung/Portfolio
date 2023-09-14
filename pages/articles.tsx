@@ -1,5 +1,6 @@
 import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
+import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -48,6 +49,7 @@ const articles = () => {
                 <title>CodeBucks | About Page</title>
                 <meta name="description" content="any description" />
             </Head>
+            <TransitionEffect />
             <main
                 className="w-ful mb-16 flex flex-col items-center justify-center overflow-hidden
             dark:text-white

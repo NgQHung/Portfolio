@@ -2,6 +2,7 @@ import AnimatedText from '@/components/AnimatedText';
 import HireMe from '@/components/HireMe';
 import {LinkArrow} from '@/components/Icons';
 import Layout from '@/components/Layout';
+import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,6 +17,7 @@ export default function Home() {
                 <title>CodeBucks | About Page</title>
                 <meta name="description" content="any description" />
             </Head>
+            <TransitionEffect />
             <main className={`flex items-center text-black w-full min-h-screen dark:text-white`}>
                 <Layout className="pt-0 md:pt-16 sm:pt-8">
                     <div className="flex items-center justify-between w-full lg:flex-col">
@@ -62,8 +64,8 @@ export default function Home() {
                                 </Link>
                             </div>
                         </div>
+                        <HireMe />
                     </div>
-                    <HireMe />
                 </Layout>
             </main>
         </>

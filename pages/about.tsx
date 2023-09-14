@@ -95,8 +95,8 @@ const about = () => {
                             <Image
                                 width={0}
                                 height={0}
-                                sizes="100vw"
-                                style={{width: '100%', height: 'auto'}}
+                                priority
+                                sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
                                 src={profilePic}
                                 alt=""
                                 className="w-full h-auto rounded-2xl"

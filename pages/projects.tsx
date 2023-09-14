@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import {motion} from 'framer-motion';
 
 interface IProject {
     type: String;
@@ -15,6 +16,7 @@ interface IProject {
     github: string;
 }
 
+const FramerImage = motion(Image);
 const profilePic =
     'https://images.unsplash.com/photo-1683009427479-c7e36bbb7bca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80';
 
@@ -31,14 +33,14 @@ const FeaturedProject: React.FC<IProject> = ({type, title, summary, img, link, g
             />
 
             <Link href={link} target="_blank" className="w-1/2 cursor-pointer overflow-hidden rounded-lg">
-                <Image
+                <FramerImage
                     src={img}
                     alt={title}
                     className="w-full h-auto"
                     width={0}
                     height={0}
-                    sizes="100vw"
-                    style={{width: '100%', height: 'auto'}}
+                    priority
+                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 50vw"
                 />
             </Link>
             <div className="w-1/2 flex flex-col items-start justify-between pl-6">
@@ -76,15 +78,7 @@ const Project: React.FC<IProject> = ({title, type, summary, img, link, github}) 
             dark:bg-white"
             />
             <Link href={link} target="_blank" className="w-full cursor-pointer overflow-hidden rounded-lg">
-                <Image
-                    src={img}
-                    alt={title}
-                    className="w-full h-auto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{width: '100%', height: 'auto'}}
-                />
+                <Image src={img} alt={title} className="w-full h-auto" width={0} height={0} sizes="100vw" />
             </Link>
             <div className="w-full flex flex-col items-start justify-between mt-4">
                 <span className="text-primary font-medium text-xl dark:text-primaryDark">{type}</span>

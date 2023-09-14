@@ -15,7 +15,6 @@ const HireMe = () => {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    style={{width: '100%', height: 'auto'}}
                 />
                 <Link
                     href="mailto:hunghunghung273@gmail.com"

@@ -26,8 +26,8 @@ export default function Home() {
                                 className="w-full h-auto "
                                 width={0}
                                 height={0}
-                                sizes="100vw"
-                                style={{width: '100%', height: 'auto'}}
+                                priority
+                                sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 50vw"
                             />
                         </div>
                         <div className="w-1/2">

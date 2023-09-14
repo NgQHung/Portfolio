@@ -28,8 +28,8 @@ const FeaturedArticle: React.FC<IFeaturedArticle> = ({img, title, time, summary,
                     className="w-full h-auto"
                     width={0}
                     height={0}
-                    sizes="100vw"
-                    style={{width: '100%', height: 'auto'}}
+                    priority
+                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 50vw"
                 />
             </Link>
             <Link href={link} target="_blank">

@@ -14,9 +14,6 @@ interface IFeaturedArticle {
     link: string;
 }
 
-const profilePic =
-    'https://images.unsplash.com/photo-1683009427479-c7e36bbb7bca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80';
-
 const FeaturedArticle: React.FC<IFeaturedArticle> = ({img, title, time, summary, link}) => {
     return (
         <li
@@ -63,7 +60,7 @@ const articles = () => {
 Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
                             time="9 min read"
                             link="/"
-                            img={profilePic}
+                            img={'/profilePicTransformed.png'}
                         />
                         <FeaturedArticle
                             title="Build A Custom Pagination Component In Reactjs From Scratch"
@@ -71,7 +68,7 @@ Follow this step-by-step guide to integrate Pagination component in your ReactJS
 Follow this step-by-step guide to integrate Pagination component in your ReactJS project."
                             time="9 min read"
                             link="/"
-                            img={profilePic}
+                            img={'/profilePicTransformed.png'}
                         />
                     </ul>
                 </Layout>

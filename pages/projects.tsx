@@ -9,7 +9,7 @@ import {motion} from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 
 interface IProject {
-    type: String;
+    type?: String;
     title: string;
     summary?: String;
     img: string;
@@ -18,16 +18,15 @@ interface IProject {
 }
 
 const FramerImage = motion(Image);
-const profilePic =
-    'https://images.unsplash.com/photo-1683009427479-c7e36bbb7bca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80';
 
 const FeaturedProject: React.FC<IProject> = ({type, title, summary, img, link, github}) => {
     return (
         <article
-            className="w-full flex items-center justify-between relative rounded-br-2xl
-        rounded-3xl border border-solid border-black bg-white shadow-2xl p-12
+            className="
+            relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border border-solid p-12 shadow-2xl   dark:bg-dark  lg:flex-col  lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4  
+            border-black bg-white
         dark:border-white dark:bg-black
-        lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
+        ">
             <div
                 className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-black
             rounded-br-3xl
@@ -65,11 +64,7 @@ const FeaturedProject: React.FC<IProject> = ({type, title, summary, img, link, g
                         {title}
                     </h2>
                 </Link>
-                <p
-                    className="my-2 font-medium text-black dark:text-white
-                sn:text-sm">
-                    {summary}
-                </p>
+                <p className=" my-2 rounded-md font-medium text-black dark:text-white sm:text-sm">{summary}</p>
                 <div className="mt-2 flex items-center">
                     <Link href={github} target="_blank" className="w-10">
                         <GithubIcon />
@@ -152,74 +147,52 @@ const projects = () => {
             </Head>
             <TransitionEffect />
 
-            <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-white">
+            <main className="mb-16  flex w-full flex-col items-center justify-center dark:text-white">
                 <Layout className="pt-16">
                     <AnimatedText
                         text="Imagination Trumps Knowledge!"
                         className="mb-16
                     lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
                     />
-                    <div
-                        className="grid grid-cols-12 gap-24 gap-y-32
-                    xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+                    <div className="grid grid-cols-12 gap-24 gap-y-32 gap-x-16 md:gap-y-24 sm:gap-x-1">
                         <div className="col-span-12">
                             <FeaturedProject
-                                title="Crypto Screener Application"
-                                img={profilePic}
-                                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                                lo cal currency."
-                                link="/"
-                                github="-"
-                                type="Featured Project"
-                            />
-                        </div>
-                        <div className="col-span-6 sm:col-span-12">
-                            <Project
-                                title="Crypto Screener Application"
-                                img={profilePic}
-                                link="/"
-                                github="-"
-                                type="Featured Project"
-                            />
-                        </div>
-                        <div className="col-span-6 sm:col-span-12">
-                            <Project
-                                title="Crypto Screener Application"
-                                img={profilePic}
-                                link="/"
-                                github="-"
+                                title="Zalando Clone Web"
+                                img="/zalando.png"
+                                summary="A clone website using React, Typescript, Redux, Tailwind designed to replicate the 
+                                features and functionalities of the popular online fashion and lifestyle 
+                                retailer. A clone website aims to provide a similar shopping experience to users."
+                                link="https://zalando-clone-five.vercel.app/"
+                                github="https://github.com/NgQHung/zalando-5/"
                                 type="Featured Project"
                             />
                         </div>
                         <div className="col-span-12">
                             <FeaturedProject
-                                title="Crypto Screener Application"
-                                img={profilePic}
-                                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                                lo cal currency."
-                                link="/"
-                                github="-"
+                                title="Website cocktail app"
+                                img="/cocktail.png"
+                                summary="A clone website using React, Typescript, Redux, Tailwind designed to allow users to 
+                                view a list of cocktails. They can also see the details of each
+                                cocktail. For each registered user they can CRUD their own cocktails."
+                                link="https://cocktail-app-opal.vercel.app/"
+                                github="https://github.com/NgQHung/cocktail-app-typescript/"
                                 type="Featured Project"
                             />
                         </div>
                         <div className="col-span-6 sm:col-span-12">
                             <Project
-                                title="Crypto Screener Application"
-                                img={profilePic}
-                                link="/"
-                                github="-"
-                                type="Featured Project"
+                                title="Pokemon Card"
+                                img="/pokemon.png"
+                                link="https://clone-pokemon.vercel.app/"
+                                github="https://github.com/NgQHung/clone-pokemon"
                             />
                         </div>
                         <div className="col-span-6 sm:col-span-12">
                             <Project
-                                title="Crypto Screener Application"
-                                img={profilePic}
-                                link="/"
-                                github="-"
-                                type="Featured Project"
+                                title="Tavern Restaurant"
+                                img="/tavern.png"
+                                link="https://tavern-restaurant.vercel.app/"
+                                github="https://github.com/NgQHung/tavern-restaurant-landing"
                             />
                         </div>
                     </div>

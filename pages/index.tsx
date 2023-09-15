@@ -7,9 +7,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const profilePic =
-    'https://images.unsplash.com/photo-1576228290547-b7e32fe598d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG9sZCUyMHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80';
-
 export default function Home() {
     return (
         <>
@@ -20,21 +17,21 @@ export default function Home() {
             <TransitionEffect />
             <main className={`flex items-center text-black w-full min-h-screen dark:text-white`}>
                 <Layout className="pt-0 md:pt-16 sm:pt-8">
-                    <div className="flex items-center justify-between w-full lg:flex-col">
-                        <div className="w-1/2 ">
+                    <div className="flex items-center justify-between w-full lg:flex-col ">
+                        <div className="w-1/2 md:inline-block md:w-full ">
                             <Image
-                                src={profilePic}
-                                alt="profilePic"
-                                className="w-full h-auto  md:inline-block md:w-full lg:hidden "
+                                src={'/profilePicTransformed.png'}
+                                alt="profile picture"
+                                className="w-full h-auto "
                                 width={0}
                                 height={0}
                                 priority
                                 sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 50vw"
                             />
                         </div>
-                        <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center ">
+                        <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
                             <AnimatedText
-                                text="Turning Vision Into Reality With Code And Design"
+                                text="Hung Nguyen Quang"
                                 className="!text-6xl !text-left
                                 xl:text-5xl lg:!text-center lg:!text=6x1 md:!text-5xl sm:!text-3xl"
                             />
@@ -45,7 +42,7 @@ export default function Home() {
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link
-                                    href=""
+                                    href="/CVHungNguyenQuang.pdf"
                                     target={'_blank'}
                                     className="flex items-center bg-black text-white p-2.3 px-6 
                                     rounded-lg text-lg font-semibold hover:bg-white hover:text-black

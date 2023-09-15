@@ -45,14 +45,21 @@ const Skills = () => {
                     whileHover={{scale: 1.05}}>
                     web
                 </motion.div>
+                <Skill name="JavaScript" x="10vw" y="8vw" />
+                <Skill name="TypeScript" x="10vw" y="-10vw" />
+                <Skill name="ReactJs" x="-13vw" y="-3vw" />
+                <Skill name="HTML&CSS" x="-20vw" y="-10vw" />
+                <Skill name="Tailwind CSS" x="-15vw" y="10vw" />
+                <Skill name="Redux" x="0vw" y="20vw" />
 
-                <Skill name="Css" x="-5vw" y="-10vw" />
-                <Skill name="HTML" x="-20vw" y="2vw" />
-                <Skill name="Javascript" x="20vw" y="6vw" />
-                <Skill name="ReactJs" x="0vw" y="12vw" />
-                <Skill name="NextJs" x="-20vw" y="-15vw" />
-                <Skill name="Tailwind Css" x="18vw" y="18vw" />
-                <Skill name="NodeJs" x="-25vw" y="18vw" />
+                <Skill name="NodeJs" x="7vw" y="-17vw" />
+                <Skill name="MongoDB" x="28vw" y="-1.5vw" />
+                <Skill name="Angular" x="0vw" y="-22vw" />
+                <Skill name="Spring Boot" x="-28vw" y="0vw" />
+                <Skill name="Java" x="27vw" y="15vw" />
+                <Skill name="SQL" x="22vw" y="-22vw" />
+                <Skill name="Git" x="-25vw" y="18vw" />
+                <Skill name="NextJs" x="-20vw" y="-20vw" />
             </div>
         </>
     );
